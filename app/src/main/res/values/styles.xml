@@ -1,8 +1,17 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/primary</item>
+
+        <!-- status bar には colorPrimaryDark が使用されます -->
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+
+        <!-- ウィジェットに色合いを付ける colorControlActivated のデフォルト値として colorAccent が使用されます -->
+        <item name="colorAccent">@color/accent</item>
+
     </style>
 
 </resources>
