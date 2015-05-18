@@ -4,6 +4,7 @@ package com.myapp.kudo.kudotodo;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 
 public class pageAdapter extends FragmentPagerAdapter {
 
@@ -15,24 +16,33 @@ public class pageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch(position){
             case 0:
-                return new TestFragment1();
+                return TestFragment1.newInstance(null,null);
+            case 1:
+                return TestFragment.newInstance(null,null);
             default:
-                return new TestFragment();
+                return TestFragment2.newInstance(null,null);
         }
     }
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
         switch(position){
             case 0:
-                return "TODOメモ";
-            default:
                 return "TODOリスト";
+            case 1:
+                return "TODO登録";
+            default:
+                return "TODOメモ";
         }
+    }
+
+    public Fragment findFragmentByPosition(ViewPager viewPager,
+                                           int position) {
+        return (Fragment) instantiateItem(viewPager, position);
     }
 }
