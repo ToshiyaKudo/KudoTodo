@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+     <!-- ボタンが押されたとき -->
+    <item android:state_pressed="true" >
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle">
+            <!--<solid-->
+            <!--android:color="#880000" />-->
+            <!--<stroke-->
+            <!--android:width="0dp"-->
+            <!--android:color="#880000" />-->
+            <corners
+                android:radius="10dp" />
+            <padding
+                android:left="0dp"
+                android:top="-0dp"
+                android:right="0dp"
+                android:bottom="0dp" />
+            <size
+                android:height="50dp"
+                android:width="300dp" />
+            <gradient
+                android:angle="270"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:startColor="#CAA27C"
+                android:endColor="#7E5A34"
+                android:type="linear"
+                />
+        </shape>
+
+    </item>
+
+
+    <!-- ボタンが押されていないときの定義 -->
+    <item android:state_pressed="false">
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle">
+            <!--<solid-->
+            <!--android:color="#ff00" />-->
+            <!--<stroke-->
+            <!--android:width="0dp"-->
+            <!--android:color="#ff0000" />-->
+            <corners
+                android:radius="10dp" />
+            <padding
+                android:left="0dp"
+                android:top="0dp"
+                android:right="0dp"
+                android:bottom="0dp" />
+            <size
+                android:height="50dp"
+                android:width="300dp" />
+            <gradient
+                android:angle="270"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:startColor="#AD8B6A"
+                android:endColor="#402E1B"
+                android:type="linear"
+                />
+        </shape>
+    </item>
+
+</selector>
